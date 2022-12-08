@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  },
+  "scripts": {
+    "compile:sass": "node-sass --watch css/style.scss css/style.css"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}

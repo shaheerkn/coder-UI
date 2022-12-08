@@ -1,0 +1,31 @@
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.aic {
+  align-items: center;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.jcs {
+  justify-content: flex-start;
+}
+
+.fdc {
+  flex-direction: column;
+}
+
+.m-auto {
+  margin-inline: auto;
+}
+
+.img-fluid {
+  width: 100%;
+}
