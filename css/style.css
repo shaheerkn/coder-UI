@@ -13,7 +13,8 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1260px;
+  max-width: 1250px;
+  padding-inline: 30px;
   margin-inline: auto; }
 
 .flex {
@@ -66,6 +67,21 @@ body {
     top: 0;
     left: auto;
     right: -93px; }
+  .section-header__tagline {
+    font-weight: 600;
+    font-size: 40px;
+    color: #422544;
+    margin-top: 20px; }
+
+.shake {
+  animation: 20s shake linear infinite; }
+
+@keyframes shake {
+  0% { }
+  50% {
+    transform: rotateY(36deg); }
+  100% {
+    transform: rotate3d(0, 1, 1, 20deg); } }
 
 .btn {
   all: unset;
@@ -79,7 +95,10 @@ body {
   background: #ff9f29;
   color: #422544;
   border-radius: 8px;
-  font-weight: 700; }
+  font-weight: 700;
+  transition: box-shadow 0.3s; }
+  .btn--primary:hover {
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75); }
 
 header {
   background: #422544;
@@ -130,7 +149,22 @@ nav {
     nav ol li a {
       font-size: 24px;
       text-decoration: none;
-      color: #fff; }
+      color: #fff;
+      position: relative;
+      padding-bottom: 10px; }
+      nav ol li a::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: white;
+        translate: -50%;
+        border-radius: 5px;
+        transition: 0.3s; }
+      nav ol li a:hover::before {
+        width: 30px; }
 
 .plugin-design {
   margin-top: 200px; }
@@ -139,11 +173,13 @@ nav {
 
 .slider {
   overflow: hidden;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
   .slider .slider__button {
     display: flex;
     justify-content: center;
-    gap: 20px; }
+    gap: 20px;
+    position: relative; }
     .slider .slider__button button {
       background: none;
       border: none;
@@ -203,11 +239,47 @@ nav {
   .team .section-header {
     max-width: 1000px; }
 
+.reviews {
+  margin-top: 200px; }
+  .reviews__wrapper {
+    margin-top: 85px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    max-width: 888px;
+    margin-inline: auto; }
+  .reviews__review {
+    display: flex;
+    align-items: center;
+    gap: 30px; }
+    .reviews__review:nth-child(even) {
+      padding-left: 150px; }
+    .reviews__review .img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 2px solid #422544; }
+      .reviews__review .img img {
+        width: 100%;
+        height: 100%; }
+    .reviews__review .content h4 {
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 10px; }
+    .reviews__review .content h5 {
+      font-size: 20px;
+      color: #422544;
+      font-weight: 500; }
+    .reviews__review .content p {
+      font-size: 20px;
+      font-weight: 300; }
+
 footer {
   padding-block: 120px 25px;
   background: #422544;
   width: 100%;
-  color: #fff; }
+  color: #fff;
+  margin-top: 200px; }
   footer .section-header {
     color: inherit; }
     footer .section-header__desc {

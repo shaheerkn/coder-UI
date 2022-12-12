@@ -4,7 +4,8 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1260px;
+  max-width: 1250px;
+  padding-inline: 30px;
   margin-inline: auto;
 }
 
@@ -74,5 +75,29 @@ body {
     top: 0;
     left: auto;
     right: -93px;
+  }
+
+  &__tagline {
+    font-weight: 600;
+    font-size: 40px;
+    color: $color-primary;
+    margin-top: 20px;
+  }
+}
+
+.shake {
+  animation: 20s shake linear infinite;
+}
+
+@keyframes shake {
+  0% {
+  }
+
+  50% {
+    transform: rotateY(36deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 1, 1, 20deg);
   }
 }

@@ -12,7 +12,9 @@
   color: $color-primary;
   border-radius: 8px;
   font-weight: 700;
-}
+  transition: box-shadow 0.3s;
 
-.btn--secondary {
+  &:hover {
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  }
 }
