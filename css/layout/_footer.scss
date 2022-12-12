@@ -1,0 +1,37 @@
+footer {
+  padding-block: 120px 25px;
+  background: $color-primary;
+  width: 100%;
+  color: #fff;
+
+  .section-header {
+    color: inherit;
+
+    &__desc {
+      font-size: 30px;
+    }
+
+    .btn {
+      margin-top: 48px;
+    }
+  }
+
+  .footer-links {
+    margin-top: 38px;
+    gap: 36px;
+
+    a {
+      font-size: 28px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  nav {
+    margin-top: 120px;
+    padding-block: 0;
+  }
+}

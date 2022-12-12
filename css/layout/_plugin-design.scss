@@ -1,0 +1,83 @@
+.plugin-design {
+  margin-top: 200px;
+
+  .slider {
+    margin-top: 80px;
+  }
+}
+
+.slider {
+  overflow: hidden;
+  width: 100%;
+
+  .slider__button {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    button {
+      background: none;
+      border: none;
+      font-size: 32px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 17px;
+      color: #000;
+      cursor: pointer;
+      padding: 19px 39px;
+      border-radius: 100px;
+      transition: all 0.3s;
+
+      &.active {
+        background: $color-black;
+        color: $color-white;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 100px;
+    height: 650px;
+    padding-bottom: 109px;
+
+    &-slide {
+      width: 520px;
+      transition: 0.3s;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -60px;
+        left: 0;
+        height: 28px;
+        width: 100%;
+        border-radius: 50%;
+        background: #000000;
+        filter: blur(22px);
+      }
+
+      img {
+        width: 100%;
+      }
+
+      &.active {
+        width: 755px;
+        margin: 0 !important;
+      }
+
+      &:first-child {
+        margin-left: -257px;
+      }
+
+      &:last-child {
+        margin-right: -257px;
+      }
+    }
+  }
+}

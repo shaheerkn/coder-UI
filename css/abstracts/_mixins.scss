@@ -2,6 +2,12 @@ body {
   font-family: "Outfit", sans-serif;
 }
 
+.container {
+  width: 100%;
+  max-width: 1260px;
+  margin-inline: auto;
+}
+
 .flex {
   display: flex;
 }
@@ -12,6 +18,10 @@ body {
 
 .jcc {
   justify-content: center;
+}
+
+.jsb {
+  justify-content: space-between;
 }
 
 .jcs {
@@ -28,4 +38,41 @@ body {
 
 .img-fluid {
   width: 100%;
+}
+
+.highlighted-word {
+  color: $color-secondary;
+  text-transform: uppercase;
+}
+
+.section-header {
+  width: 100%;
+  max-width: 706px;
+  margin-inline: auto;
+  text-align: center;
+  color: $color-primary;
+  position: relative;
+
+  &__title {
+    font-size: 64px;
+    font-weight: 600;
+  }
+
+  &__desc {
+    font-size: 40px;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+
+  &__img {
+    position: absolute;
+    top: -34px;
+    left: -120px;
+  }
+
+  &__img.right {
+    top: 0;
+    left: auto;
+    right: -93px;
+  }
 }

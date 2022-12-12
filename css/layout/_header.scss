@@ -1,0 +1,60 @@
+header {
+  background: $color-primary;
+  padding-block-end: 100px;
+
+  nav {
+    padding-block: 25px;
+
+    ol {
+      margin-left: 333px;
+    }
+  }
+
+  .hero {
+    margin-block-start: 195px;
+
+    &__content {
+      width: 100%;
+      max-width: 413px;
+      height: 300px;
+      color: $color-white;
+      padding-top: 40px;
+
+      h1 {
+        font-size: 64px;
+        margin-bottom: 30px;
+        line-height: 107.5%;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 40px;
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 38px;
+        font-weight: 600;
+      }
+    }
+
+    &__media {
+      width: 100%;
+      max-width: 747px;
+      border-radius: 40px;
+      overflow: hidden;
+    }
+
+    .meta-data {
+      margin-top: 137px;
+      color: $color-white;
+      gap: 40px;
+
+      &__data {
+        border: 2px solid currentColor;
+        font-size: 32px;
+        padding: 22px 30px 22px 34px;
+        border-radius: 85px;
+        gap: 12px;
+        font-weight: 600;
+      }
+    }
+  }
+}

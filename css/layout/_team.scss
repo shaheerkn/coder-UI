@@ -1,0 +1,15 @@
+.team {
+  margin-top: 200px;
+
+  &__logos {
+    flex-wrap: wrap;
+    max-width: 735px;
+    margin-inline: auto;
+    gap: 60px;
+    margin-top: 76px;
+  }
+
+  .section-header {
+    max-width: 1000px;
+  }
+}
