@@ -42,18 +42,22 @@ body {
   height: 100%;
 }
 
+.color-primary {
+  color: $color-primary;
+}
+
 .highlighted-word {
   color: $color-secondary;
   text-transform: uppercase;
 }
 
 .section-header {
-  width: 100%;
+  position: relative;
   max-width: 706px;
+  width: 100%;
   margin-inline: auto;
   text-align: center;
   color: $color-primary;
-  position: relative;
 
   @media (max-width: 768px) {
     max-width: 320px;
@@ -62,6 +66,11 @@ body {
   &__title {
     font-size: 64px;
     font-weight: 600;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 12px;
+
     @media (max-width: 768px) {
       img {
         display: none;
@@ -70,28 +79,14 @@ body {
   }
 
   &__desc {
-    font-size: 40px;
     margin-top: 20px;
+    font-size: 40px;
     font-weight: 600;
   }
 
   &__img {
     position: absolute;
-    top: -34px;
-    left: -120px;
-
-    @media (max-width: 1024px) {
-      top: -10px;
-      left: 50%;
-      transform: translatex(-50%);
-    }
-  }
-
-  &__tagline {
-    font-weight: 600;
-    font-size: 40px;
-    color: $color-primary;
-    margin-top: 20px;
+    inset: -34px auto auto -120px;
   }
 
   @media (max-width: 1024px) {
@@ -103,23 +98,22 @@ body {
       font-size: 20px;
     }
 
-    &__tagline {
-      font-size: 20px;
+    &__img {
+      inset: -10px auto auto 50%;
+      translate: -50% 0;
     }
   }
 
   @media (min-width: 768px) {
     &__img.right {
-      top: 0;
-      left: auto;
-      right: -93px;
+      inset: 0 -93px auto auto;
     }
   }
 }
 
 @media (min-width: 1024px) {
   .shake {
-    animation: 20s shake linear infinite;
+    animation: 15s shake alternate-reverse infinite;
   }
 
   @keyframes shake {

@@ -42,60 +42,55 @@ body {
   width: 100%;
   height: 100%; }
 
+.color-primary {
+  color: #422544; }
+
 .highlighted-word {
   color: #ff9f29;
   text-transform: uppercase; }
 
 .section-header {
-  width: 100%;
+  position: relative;
   max-width: 706px;
+  width: 100%;
   margin-inline: auto;
   text-align: center;
-  color: #422544;
-  position: relative; }
+  color: #422544; }
   @media (max-width: 768px) {
     .section-header {
       max-width: 320px; } }
   .section-header__title {
     font-size: 64px;
-    font-weight: 600; }
+    font-weight: 600;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 12px; }
     @media (max-width: 768px) {
       .section-header__title img {
         display: none; } }
   .section-header__desc {
-    font-size: 40px;
     margin-top: 20px;
+    font-size: 40px;
     font-weight: 600; }
   .section-header__img {
     position: absolute;
-    top: -34px;
-    left: -120px; }
-    @media (max-width: 1024px) {
-      .section-header__img {
-        top: -10px;
-        left: 50%;
-        transform: translatex(-50%); } }
-  .section-header__tagline {
-    font-weight: 600;
-    font-size: 40px;
-    color: #422544;
-    margin-top: 20px; }
+    inset: -34px auto auto -120px; }
   @media (max-width: 1024px) {
     .section-header__title {
       font-size: 36px; }
     .section-header__desc {
       font-size: 20px; }
-    .section-header__tagline {
-      font-size: 20px; } }
+    .section-header__img {
+      inset: -10px auto auto 50%;
+      translate: -50% 0; } }
   @media (min-width: 768px) {
     .section-header__img.right {
-      top: 0;
-      left: auto;
-      right: -93px; } }
+      inset: 0 -93px auto auto; } }
 
 @media (min-width: 1024px) {
   .shake {
-    animation: 20s shake linear infinite; }
+    animation: 15s shake alternate-reverse infinite; }
   @keyframes shake {
     0% { }
     50% {
@@ -114,8 +109,8 @@ body {
   padding: 15px 12px;
   background: #ff9f29;
   color: #422544;
-  border-radius: 8px;
   font-weight: 700;
+  border-radius: 8px;
   transition: box-shadow 0.3s; }
   .btn--primary:hover {
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75); }
@@ -125,10 +120,10 @@ header {
   padding-block-end: 100px; }
   header nav {
     padding-block: 25px; }
-    header nav ol {
+    header nav ul {
       margin-left: 333px; }
       @media (max-width: 1024px) {
-        header nav ol {
+        header nav ul {
           margin-left: auto;
           gap: 13px; } }
   header .hero {
@@ -193,18 +188,18 @@ header {
 
 nav {
   padding-block: 25px; }
-  nav ol {
+  nav ul {
     gap: 65px; }
-    nav ol li a {
+    nav ul li a {
       font-size: 24px;
       text-decoration: none;
       color: #fff;
       position: relative;
       padding-bottom: 10px; }
       @media (max-width: 1024px) {
-        nav ol li a {
+        nav ul li a {
           font-size: 16px; } }
-      nav ol li a::before {
+      nav ul li a::before {
         content: "";
         position: absolute;
         bottom: 0;
@@ -215,7 +210,7 @@ nav {
         translate: -50%;
         border-radius: 5px;
         transition: 0.3s; }
-      nav ol li a:hover::before {
+      nav ul li a:hover::before {
         width: 30px; }
 
 .plugin-design {
@@ -330,7 +325,8 @@ nav {
     max-width: 735px;
     margin-inline: auto;
     gap: 60px;
-    margin-top: 76px; }
+    margin-top: 76px;
+    align-items: flex-end; }
     @media (max-width: 768px) {
       .team__logos {
         max-width: 300px; } }
