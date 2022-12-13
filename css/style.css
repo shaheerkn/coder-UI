@@ -13,8 +13,8 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1250px;
-  padding-inline: 30px;
+  max-width: 1260px;
+  padding-inline: 40px;
   margin-inline: auto; }
 
 .flex {
@@ -130,7 +130,7 @@ header {
     margin-block-start: 57px; }
     @media (max-width: 1024px) {
       header .hero {
-        margin-block-start: 67px; }
+        margin-block-start: 42px; }
         header .hero__wrapper {
           flex-direction: column;
           align-items: center;
@@ -153,7 +153,8 @@ header {
       @media (max-width: 1024px) {
         header .hero__content {
           max-width: 276px;
-          text-align: center; }
+          text-align: center;
+          padding-block-start: 0; }
           header .hero__content h1 {
             font-size: 48px; }
           header .hero__content p {
@@ -163,6 +164,9 @@ header {
       max-width: 747px;
       border-radius: 40px;
       overflow: hidden; }
+      @media (max-width: 768px) {
+        header .hero__media {
+          border-radius: 20px; } }
     header .hero .meta-data {
       margin-block-start: 137px;
       color: #fff;
@@ -226,7 +230,7 @@ nav {
   @media (max-width: 1024px) {
     .slider {
       margin-block-start: 30px;
-      overflow-x: auto; } }
+      overflow-x: visible; } }
   .slider .slider__button {
     position: relative;
     display: flex;
@@ -269,7 +273,7 @@ nav {
     justify-content: center;
     gap: 60px;
     margin-block-start: 100px;
-    padding-block-end: 110px; }
+    padding-block-end: 80px; }
     @media (max-width: 1024px) {
       .slider__wrapper {
         width: 100%;
@@ -318,6 +322,10 @@ nav {
 
 .team {
   margin-block-start: 200px; }
+  @media (max-width: 1024px) {
+    .team {
+      padding-inline: 37px;
+      margin-block-start: 50px; } }
   .team__logos {
     flex-wrap: wrap;
     max-width: 735px;
@@ -330,13 +338,10 @@ nav {
         max-width: 300px; } }
   .team .section-header {
     max-width: 1000px; }
-  @media (max-width: 1024px) {
-    .team {
-      padding-inline: 37px; } }
 
 .reviews {
   margin-block-start: 200px; }
-  @media (max-width: 1024x) {
+  @media (max-width: 1024px) {
     .reviews {
       margin-block-start: 140px; } }
   .reviews__wrapper {
@@ -346,6 +351,9 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 100px; }
+    @media (max-width: 768px) {
+      .reviews__wrapper {
+        gap: 50px; } }
   .reviews__review {
     display: flex;
     align-items: center;
@@ -367,6 +375,10 @@ nav {
       overflow: hidden; }
       .reviews__review .img img {
         transition: scale 0.3s; }
+      @media (max-width: 768px) {
+        .reviews__review .img {
+          width: 80px;
+          height: 80px; } }
     .reviews__review:hover .img img {
       scale: 1.1; }
     .reviews__review .content {
@@ -385,15 +397,20 @@ nav {
         font-size: 20px;
         font-weight: 300; }
       @media (max-width: 768px) {
-        .reviews__review .content h4 {
-          margin-block: 15px 0; }
-        .reviews__review .content h5 {
-          order: -1;
-          display: inline-block;
-          color: #ff9f29; }
-        .reviews__review .content p {
-          order: -1;
-          color: #ff9f29; } }
+        .reviews__review .content {
+          max-width: calc(100% - 150px); }
+          .reviews__review .content h4 {
+            margin-block: 15px 0;
+            font-size: 18px; }
+          .reviews__review .content h5 {
+            font-size: 15px;
+            order: -1;
+            display: inline-block;
+            color: #ff9f29; }
+          .reviews__review .content p {
+            order: -1;
+            color: #ff9f29;
+            font-size: 15px; } }
 
 footer {
   width: 100%;
@@ -401,6 +418,9 @@ footer {
   padding-block: 120px 25px;
   background: #422544;
   color: #fff; }
+  @media (max-width: 768px) {
+    footer {
+      padding-block: 75px 25px; } }
   footer .section-header {
     color: inherit; }
     footer .section-header__desc {
@@ -439,6 +459,7 @@ footer {
         font-size: 18px; }
         footer nav .footer-logo {
           display: none; }
-        footer nav ol {
+        footer nav ul {
+          width: 100%;
           gap: 20px;
           justify-content: center; } }

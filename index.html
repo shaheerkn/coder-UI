@@ -16,9 +16,17 @@
     <header>
       <div class="container">
         <nav class="flex" aria-label="top navbar">
-          <a href="#"
-            ><img src="/assets/images/logo.svg" alt="Top coder logo"
-          /></a>
+          <a href="#">
+            <img
+              src="/assets/images/logo.svg"
+              alt="Top coder logo"
+              srcset="
+                /assets/images/logo-mobile.svg 74w,
+                /assets/images/logo-mobile.svg 98w
+              "
+              sizes="(max-width: 768px) 74px, (min-width: 768px) 98px"
+            />
+          </a>
           <ul class="flex" aria-label="top navigation">
             <li role="link"><a href="#">Features</a></li>
             <li role="link"><a href="#">Install</a></li>
@@ -187,11 +195,6 @@
               />
             </div>
           </div>
-
-          <div class="slider-navigation">
-            <button class="prev">prev</button>
-            <button class="next">next</button>
-          </div>
         </div>
       </section>
 
@@ -205,7 +208,7 @@
               /assets/images/complex-mobile.png  121w,
               /assets/images/complex-desktop.png 283w
             "
-            sizes="(max-width: 600px) 121px, (min-width: 600px) 283px"
+            sizes="(max-width: 768px) 121px, (min-width: 768px) 283px"
             loading="lazy"
             aria-hidden="true"
           />
@@ -262,7 +265,7 @@
             </div>
             <div class="slider__wrapper-slide">
               <img
-                src="/assets/images/coplex-slider-2.png"
+                src="/assets/images/complex-slider-2.png"
                 alt="slider"
                 loading="lazy"
               />
@@ -357,9 +360,9 @@
                 />
               </div>
               <div class="content">
-                <h4>Framer classic vibe in Figma.</h4>
+                <h4 title="review">Framer classic vibe in Figma.</h4>
                 <h5 title="name">Junhyuk Jang</h5>
-                <p title="Experise">Product Designer</p>
+                <p title="experise">Product Designer</p>
               </div>
             </div>
             <div class="reviews__review">
@@ -373,12 +376,12 @@
                 />
               </div>
               <div class="content">
-                <h4>
+                <h4 title="review">
                   It feels really nice getting the higher fidelity control while
                   still sitting right next to my layers on the canvas.
                 </h4>
                 <h5 title="name">Brian Lovin</h5>
-                <p title="Experise">Product Designer</p>
+                <p title="experise">Product Designer</p>
               </div>
             </div>
             <div class="reviews__review">
@@ -392,12 +395,12 @@
                 />
               </div>
               <div class="content">
-                <h4>
+                <h4 title="review">
                   Tried it out today on Figma and it's crazy. Imagine what you
                   could achieve coding right in Figma.
                 </h4>
                 <h5 title="name">NuelCee</h5>
-                <p title="Experise">Interaction Designer</p>
+                <p title="experise">Interaction Designer</p>
               </div>
             </div>
             <div class="reviews__review">
@@ -411,12 +414,12 @@
                 />
               </div>
               <div class="content" role="group">
-                <h4>
+                <h4 title="review">
                   Classic Framer returns in it. I am going to have so much fun
                   with this.
                 </h4>
                 <h5 title="name">Gavin Nelson</h5>
-                <p title="Experise">Product Designer</p>
+                <p title="experise">Product Designer</p>
               </div>
             </div>
           </div>

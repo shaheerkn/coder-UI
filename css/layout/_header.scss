@@ -19,7 +19,7 @@ header {
     margin-block-start: 57px;
 
     @media (max-width: 1024px) {
-      margin-block-start: 67px;
+      margin-block-start: 42px;
 
       &__wrapper {
         flex-direction: column;
@@ -51,6 +51,7 @@ header {
       @media (max-width: 1024px) {
         max-width: 276px;
         text-align: center;
+        padding-block-start: 0;
 
         h1 {
           font-size: 48px;
@@ -67,6 +68,10 @@ header {
       max-width: 747px;
       border-radius: 40px;
       overflow: hidden;
+
+      @media (max-width: 768px) {
+        border-radius: 20px;
+      }
     }
 
     .meta-data {

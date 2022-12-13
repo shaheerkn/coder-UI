@@ -5,6 +5,10 @@ footer {
   background: $color-primary;
   color: $color-white;
 
+  @media (max-width: 768px) {
+    padding-block: 75px 25px;
+  }
+
   .section-header {
     color: inherit;
 
@@ -60,7 +64,8 @@ footer {
         display: none;
       }
 
-      ol {
+      ul {
+        width: 100%;
         gap: 20px;
         justify-content: center;
       }
