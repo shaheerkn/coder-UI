@@ -1,6 +1,11 @@
 .team {
   margin-block-start: 200px;
 
+  @media (max-width: 1024px) {
+    padding-inline: 37px;
+    margin-block-start: 50px;
+  }
+
   &__logos {
     flex-wrap: wrap;
     max-width: 735px;
@@ -16,9 +21,5 @@
 
   .section-header {
     max-width: 1000px;
-  }
-
-  @media (max-width: 1024px) {
-    padding-inline: 37px;
   }
 }
