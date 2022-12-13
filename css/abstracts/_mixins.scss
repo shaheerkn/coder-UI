@@ -2,6 +2,13 @@ body {
   font-family: "Outfit", sans-serif;
 }
 
+.container {
+  width: 100%;
+  max-width: 1250px;
+  padding-inline: 30px;
+  margin-inline: auto;
+}
+
 .flex {
   display: flex;
 }
@@ -12,6 +19,10 @@ body {
 
 .jcc {
   justify-content: center;
+}
+
+.jsb {
+  justify-content: space-between;
 }
 
 .jcs {
@@ -28,4 +39,93 @@ body {
 
 .img-fluid {
   width: 100%;
+  height: 100%;
+}
+
+.color-primary {
+  color: $color-primary;
+}
+
+.highlighted-word {
+  color: $color-secondary;
+  text-transform: uppercase;
+}
+
+.section-header {
+  position: relative;
+  max-width: 706px;
+  width: 100%;
+  margin-inline: auto;
+  text-align: center;
+  color: $color-primary;
+
+  @media (max-width: 768px) {
+    max-width: 320px;
+  }
+
+  &__title {
+    font-size: 64px;
+    font-weight: 600;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 12px;
+
+    @media (max-width: 768px) {
+      img {
+        display: none;
+      }
+    }
+  }
+
+  &__desc {
+    margin-block-start: 20px;
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  &__img {
+    position: absolute;
+    inset: -34px auto auto -120px;
+  }
+
+  @media (max-width: 1024px) {
+    &__title {
+      font-size: 36px;
+    }
+
+    &__desc {
+      font-size: 20px;
+    }
+
+    &__img {
+      inset: -10px auto auto 50%;
+      translate: -50% 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &__img.right {
+      inset: 0 -93px auto auto;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .shake {
+    animation: 15s shake alternate-reverse infinite;
+  }
+
+  @keyframes shake {
+    0% {
+    }
+
+    50% {
+      transform: rotateY(36deg);
+    }
+
+    100% {
+      transform: rotate3d(0, 1, 1, 20deg);
+    }
+  }
 }

@@ -1,0 +1,7 @@
+.plugin-design {
+  margin-block-start: 200px;
+
+  @media (max-width: 768px) {
+    margin-block-start: 150px;
+  }
+}

@@ -1,0 +1,24 @@
+.team {
+  margin-block-start: 200px;
+
+  &__logos {
+    flex-wrap: wrap;
+    max-width: 735px;
+    margin-inline: auto;
+    gap: 60px;
+    margin-block-start: 76px;
+    align-items: flex-end;
+
+    @media (max-width: 768px) {
+      max-width: 300px;
+    }
+  }
+
+  .section-header {
+    max-width: 1000px;
+  }
+
+  @media (max-width: 1024px) {
+    padding-inline: 37px;
+  }
+}
