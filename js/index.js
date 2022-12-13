@@ -34,11 +34,10 @@ const options = {
 const sectionObserver = new IntersectionObserver(function (entries, observer) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      counterEL.forEach((item) => {
-        item.getAttribute("data-value");
+      counterEL.forEach((counter) => {
         anime({
-          targets: item,
-          innerHTML: ["0000", item.getAttribute("data-value")],
+          targets: counter,
+          innerHTML: ["0000", counter.getAttribute("data-value")],
           round: 1,
           duration: 2000,
         });

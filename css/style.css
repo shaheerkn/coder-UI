@@ -70,7 +70,7 @@ body {
       .section-header__title img {
         display: none; } }
   .section-header__desc {
-    margin-top: 20px;
+    margin-block-start: 20px;
     font-size: 40px;
     font-weight: 600; }
   .section-header__img {
@@ -121,10 +121,10 @@ header {
   header nav {
     padding-block: 25px; }
     header nav ul {
-      margin-left: 333px; }
+      margin-inline-start: 333px; }
       @media (max-width: 1024px) {
         header nav ul {
-          margin-left: auto;
+          margin-inline-start: auto;
           gap: 13px; } }
   header .hero {
     margin-block-start: 57px; }
@@ -139,16 +139,16 @@ header {
       width: 100%;
       max-width: 413px;
       color: #fff;
-      padding-top: 40px; }
+      padding-block-start: 40px; }
       header .hero__content h1 {
         font-size: 64px;
-        margin-bottom: 30px;
+        margin-block-end: 30px;
         line-height: 107.5%;
         font-weight: 600; }
       header .hero__content p {
         font-size: 40px;
         color: rgba(255, 255, 255, 0.5);
-        margin-bottom: 38px;
+        margin-block-end: 38px;
         font-weight: 600; }
       @media (max-width: 1024px) {
         header .hero__content {
@@ -173,12 +173,12 @@ header {
           gap: 15px; } }
       header .hero .meta-data__data {
         border: 2px solid currentColor;
-        font-size: 32px;
-        padding: 22px 30px 22px 34px;
         border-radius: 85px;
+        padding: 22px 30px 22px 34px;
+        font-size: 32px;
         font-weight: 600; }
         header .hero .meta-data__data img {
-          margin-right: 11px; }
+          margin-inline-end: 11px; }
         @media (max-width: 768px) {
           header .hero .meta-data__data {
             height: min-content;
@@ -191,53 +191,54 @@ nav {
   nav ul {
     gap: 65px; }
     nav ul li a {
+      position: relative;
       font-size: 24px;
       text-decoration: none;
       color: #fff;
-      position: relative;
-      padding-bottom: 10px; }
+      padding-block-end: 10px; }
       @media (max-width: 1024px) {
         nav ul li a {
           font-size: 16px; } }
       nav ul li a::before {
         content: "";
         position: absolute;
-        bottom: 0;
-        left: 50%;
+        inset: auto auto 0 50%;
         width: 0;
         height: 2px;
         background: white;
         translate: -50%;
         border-radius: 5px;
-        transition: 0.3s; }
+        transition: width 0.3s; }
       nav ul li a:hover::before {
         width: 30px; }
 
 .plugin-design {
   margin-block-start: 200px; }
-  .plugin-design .slider {
-    margin-block-start: 80px; }
   @media (max-width: 768px) {
     .plugin-design {
-      margin-block-start: 150px; }
-      .plugin-design .slider {
-        margin-block-start: 30px; } }
+      margin-block-start: 150px; } }
 
 .slider {
-  overflow: hidden;
+  position: relative;
+  margin-block-start: 80px;
   width: 100%;
-  position: relative; }
+  overflow-x: hidden; }
+  @media (max-width: 1024px) {
+    .slider {
+      margin-block-start: 30px;
+      overflow-x: auto; } }
   .slider .slider__button {
+    position: relative;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    position: relative; }
+    gap: 20px; }
     @media (max-width: 1024px) {
       .slider .slider__button {
         gap: 0; } }
     .slider .slider__button button {
       background: none;
       border: none;
+      border-radius: 100px;
       font-size: 32px;
       font-weight: 600;
       display: flex;
@@ -246,8 +247,7 @@ nav {
       color: #000;
       cursor: pointer;
       padding: 19px 39px;
-      border-radius: 100px;
-      transition: all 0.3s; }
+      transition: background 0.3s, color 0.3s; }
       .slider .slider__button button.active {
         background: #000;
         color: #fff; }
@@ -262,21 +262,20 @@ nav {
         .slider .slider__button button {
           font-size: 13px; } }
   .slider__wrapper {
+    position: relative;
+    height: 650px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 60px;
-    margin-top: 100px;
-    height: 650px;
-    padding-bottom: 109px;
-    position: relative; }
+    margin-block-start: 100px;
+    padding-block-end: 110px; }
     @media (max-width: 1024px) {
       .slider__wrapper {
         width: 100%;
         height: auto;
-        margin-top: 30px;
-        padding-bottom: 70%;
-        overflow: auto; } }
+        margin-block-start: 30px;
+        padding-block-end: 70%; } }
     .slider__wrapper-slide {
       width: 520px;
       transition: 0.3s;
@@ -284,8 +283,7 @@ nav {
       .slider__wrapper-slide::after {
         content: "";
         position: absolute;
-        bottom: -60px;
-        left: 0;
+        inset: auto auto -60px 0;
         height: 28px;
         width: 100%;
         border-radius: 50%;
@@ -293,7 +291,7 @@ nav {
         filter: blur(22px); }
         @media (max-width: 768px) {
           .slider__wrapper-slide::after {
-            bottom: -30px;
+            inset-block-end: -30px;
             background: rgba(105, 105, 105, 0.7); } }
       .slider__wrapper-slide img {
         width: 100%; }
@@ -301,7 +299,7 @@ nav {
         .slider__wrapper-slide {
           width: calc(100% - 80px);
           position: absolute;
-          top: 0;
+          inset-block-start: 0;
           opacity: 0;
           transition: opacity 0.3s; } }
       .slider__wrapper-slide.active {
@@ -310,22 +308,22 @@ nav {
         @media (max-width: 1024px) {
           .slider__wrapper-slide.active {
             width: calc(100% - 80px);
-            z-index: 2222;
+            z-index: 2;
             opacity: 1; } }
       @media (min-width: 1024px) {
         .slider__wrapper-slide:first-child {
-          margin-left: -257px; }
+          margin-inline-start: -257px; }
         .slider__wrapper-slide:last-child {
-          margin-right: -257px; } }
+          margin-inline-end: -257px; } }
 
 .team {
-  margin-top: 200px; }
+  margin-block-start: 200px; }
   .team__logos {
     flex-wrap: wrap;
     max-width: 735px;
     margin-inline: auto;
     gap: 60px;
-    margin-top: 76px;
+    margin-block-start: 76px;
     align-items: flex-end; }
     @media (max-width: 768px) {
       .team__logos {
@@ -342,12 +340,12 @@ nav {
     .reviews {
       margin-block-start: 140px; } }
   .reviews__wrapper {
+    max-width: 888px;
     margin-block-start: 85px;
     margin-inline: auto;
     display: flex;
     flex-direction: column;
-    gap: 100px;
-    max-width: 888px; }
+    gap: 100px; }
   .reviews__review {
     display: flex;
     align-items: center;
@@ -356,7 +354,7 @@ nav {
       .reviews__review {
         gap: 20px; }
         .reviews__review:nth-child(even) {
-          padding-left: 150px; } }
+          padding-inline-start: 150px; } }
     @media (max-width: 768px) {
       .reviews__review {
         flex-direction: column;
@@ -364,15 +362,13 @@ nav {
     .reviews__review .img {
       width: 120px;
       height: 120px;
-      border-radius: 50%;
       border: 2px solid #422544;
+      border-radius: 50%;
       overflow: hidden; }
       .reviews__review .img img {
-        width: 100%;
-        height: 100%;
-        transition: transform 1s; }
+        transition: scale 0.3s; }
     .reviews__review:hover .img img {
-      transform: scale(1.1); }
+      scale: 1.1; }
     .reviews__review .content {
       max-width: 585px;
       display: flex;
@@ -380,11 +376,11 @@ nav {
       .reviews__review .content h4 {
         font-size: 24px;
         font-weight: 400;
-        margin-bottom: 10px; }
+        margin-block-end: 10px; }
       .reviews__review .content h5 {
         font-size: 20px;
-        color: #422544;
-        font-weight: 500; }
+        font-weight: 500;
+        color: #422544; }
       .reviews__review .content p {
         font-size: 20px;
         font-weight: 300; }
@@ -400,11 +396,11 @@ nav {
           color: #ff9f29; } }
 
 footer {
+  width: 100%;
+  margin-block-start: 200px;
   padding-block: 120px 25px;
   background: #422544;
-  width: 100%;
-  color: #fff;
-  margin-top: 200px; }
+  color: #fff; }
   footer .section-header {
     color: inherit; }
     footer .section-header__desc {
@@ -415,7 +411,7 @@ footer {
           margin-inline: auto;
           font-size: 18px; } }
     footer .section-header .btn {
-      margin-top: 48px; }
+      margin-block-start: 48px; }
   footer .footer-links {
     margin-block-start: 38px;
     gap: 36px; }
@@ -435,7 +431,7 @@ footer {
         footer .footer-links a {
           font-size: 16px; } }
   footer nav {
-    margin-top: 120px;
+    margin-block-start: 120px;
     padding-block: 0; }
     @media (max-width: 1024px) {
       footer nav {

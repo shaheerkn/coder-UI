@@ -1,12 +1,12 @@
 .team {
-  margin-top: 200px;
+  margin-block-start: 200px;
 
   &__logos {
     flex-wrap: wrap;
     max-width: 735px;
     margin-inline: auto;
     gap: 60px;
-    margin-top: 76px;
+    margin-block-start: 76px;
     align-items: flex-end;
 
     @media (max-width: 768px) {

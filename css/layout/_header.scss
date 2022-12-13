@@ -6,10 +6,10 @@ header {
     padding-block: 25px;
 
     ul {
-      margin-left: 333px;
+      margin-inline-start: 333px;
 
       @media (max-width: 1024px) {
-        margin-left: auto;
+        margin-inline-start: auto;
         gap: 13px;
       }
     }
@@ -32,11 +32,11 @@ header {
       width: 100%;
       max-width: 413px;
       color: $color-white;
-      padding-top: 40px;
+      padding-block-start: 40px;
 
       h1 {
         font-size: 64px;
-        margin-bottom: 30px;
+        margin-block-end: 30px;
         line-height: 107.5%;
         font-weight: 600;
       }
@@ -44,7 +44,7 @@ header {
       p {
         font-size: 40px;
         color: rgba(255, 255, 255, 0.5);
-        margin-bottom: 38px;
+        margin-block-end: 38px;
         font-weight: 600;
       }
 
@@ -81,13 +81,13 @@ header {
 
       &__data {
         border: 2px solid currentColor;
-        font-size: 32px;
-        padding: 22px 30px 22px 34px;
         border-radius: 85px;
+        padding: 22px 30px 22px 34px;
+        font-size: 32px;
         font-weight: 600;
 
         img {
-          margin-right: 11px;
+          margin-inline-end: 11px;
         }
 
         @media (max-width: 768px) {

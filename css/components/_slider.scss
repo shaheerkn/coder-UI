@@ -1,0 +1,129 @@
+.slider {
+  position: relative;
+  margin-block-start: 80px;
+  width: 100%;
+  overflow-x: hidden;
+
+  @media (max-width: 1024px) {
+    margin-block-start: 30px;
+    overflow-x: auto;
+  }
+
+  .slider__button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    @media (max-width: 1024px) {
+      gap: 0;
+    }
+
+    button {
+      background: none;
+      border: none;
+      border-radius: 100px;
+      font-size: 32px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 17px;
+      color: #000;
+      cursor: pointer;
+      padding: 19px 39px;
+      transition: background 0.3s, color 0.3s;
+
+      &.active {
+        background: $color-black;
+        color: $color-white;
+      }
+
+      @media (max-width: 1024px) {
+        font-size: 18px;
+        padding: 0 20px;
+        gap: 7px;
+
+        svg {
+          width: 17px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        font-size: 13px;
+      }
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin-block-start: 100px;
+    padding-block-end: 110px;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+      height: auto;
+      margin-block-start: 30px;
+      padding-block-end: 70%;
+    }
+
+    &-slide {
+      width: 520px;
+      transition: 0.3s;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: auto auto -60px 0;
+        height: 28px;
+        width: 100%;
+        border-radius: 50%;
+        background: #000000;
+        filter: blur(22px);
+
+        @media (max-width: 768px) {
+          inset-block-end: -30px;
+          background: rgba(105, 105, 105, 0.7);
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+
+      @media (max-width: 1024px) {
+        width: calc(100% - 80px);
+        position: absolute;
+        inset-block-start: 0;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      &.active {
+        width: 755px;
+        margin: 0 !important;
+
+        @media (max-width: 1024px) {
+          width: calc(100% - 80px);
+          z-index: 2;
+          opacity: 1;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        &:first-child {
+          margin-inline-start: -257px;
+        }
+
+        &:last-child {
+          margin-inline-end: -257px;
+        }
+      }
+    }
+  }
+}
