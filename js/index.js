@@ -1,8 +1,5 @@
-"use strict";
-
 let buttons = document.querySelectorAll(".slider__button button");
 let slides = document.querySelectorAll(".slider__wrapper-slide");
-// let btnOverlay = document.querySelector(".slider__button::before");
 const removeActiveClass = function (childElems, slideElems) {
   for (let i = 0; i < childElems.length; i++) {
     console.log(childElems);
@@ -35,7 +32,7 @@ let counterEL = document.querySelectorAll(".meta-data__data span");
 
 counterEL.forEach((counter) => {
   let valueLength = counter.getAttribute("data-value").length;
-  counter.style.cssText = `width: ${valueLength * 16}px`;
+  counter.style.cssText = `width: ${valueLength}ch`;
 });
 
 const options = {
@@ -43,7 +40,7 @@ const options = {
   threshold: 0,
 };
 
-const sectionObserver = new IntersectionObserver(function (entries) {
+const sectionObserver = new IntersectionObserver(function (entries, observer) {
   entries.forEach((entry) => {
     counterEL.forEach((item) => {
       item.getAttribute("data-value");
@@ -53,7 +50,7 @@ const sectionObserver = new IntersectionObserver(function (entries) {
         round: 1,
         duration: 2000,
       });
-      // observer.unobserve(counterSection);
+      observer.unobserve(entry.target);
     });
   });
 }, options);

@@ -7,16 +7,30 @@ header {
 
     ol {
       margin-left: 333px;
+
+      @media (max-width: 1024px) {
+        margin-left: auto;
+        gap: 13px;
+      }
     }
   }
 
   .hero {
-    margin-block-start: 195px;
+    margin-block-start: 57px;
+
+    @media (max-width: 1024px) {
+      margin-block-start: 67px;
+
+      &__wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+      }
+    }
 
     &__content {
       width: 100%;
       max-width: 413px;
-      height: 300px;
       color: $color-white;
       padding-top: 40px;
 
@@ -33,6 +47,19 @@ header {
         margin-bottom: 38px;
         font-weight: 600;
       }
+
+      @media (max-width: 1024px) {
+        max-width: 276px;
+        text-align: center;
+
+        h1 {
+          font-size: 48px;
+        }
+
+        p {
+          font-size: 20px;
+        }
+      }
     }
 
     &__media {
@@ -43,17 +70,32 @@ header {
     }
 
     .meta-data {
-      margin-top: 137px;
+      margin-block-start: 137px;
       color: $color-white;
       gap: 40px;
+
+      @media (max-width: 1024px) {
+        margin-block-start: 50px;
+        gap: 15px;
+      }
 
       &__data {
         border: 2px solid currentColor;
         font-size: 32px;
         padding: 22px 30px 22px 34px;
         border-radius: 85px;
-        gap: 12px;
         font-weight: 600;
+
+        img {
+          margin-right: 11px;
+        }
+
+        @media (max-width: 768px) {
+          height: min-content;
+          font-size: 16px;
+          padding: 10px 20px;
+          gap: 0;
+        }
       }
     }
   }
