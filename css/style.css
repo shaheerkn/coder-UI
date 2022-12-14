@@ -162,7 +162,8 @@ header {
             font-size: 20px; } }
     header .hero__media {
       width: 100%;
-      max-width: 747px;
+      max-width: 750px;
+      max-height: 498px;
       border-radius: 40px;
       overflow: hidden; }
       @media (max-width: 768px) {
