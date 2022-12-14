@@ -300,7 +300,8 @@ nav {
             inset-block-end: -30px;
             background: rgba(105, 105, 105, 0.7); } }
       .slider__wrapper-slide img {
-        width: 100%; }
+        width: 100%;
+        border-radius: 20px; }
       @media (max-width: 1024px) {
         .slider__wrapper-slide {
           width: calc(100% - 80px);
