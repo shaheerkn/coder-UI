@@ -92,7 +92,8 @@ body {
   .shake {
     animation: 15s shake alternate-reverse infinite; }
   @keyframes shake {
-    0% { }
+    0% {
+      transform: none; }
     50% {
       transform: rotateY(36deg); }
     100% {
@@ -328,11 +329,11 @@ nav {
       margin-block-start: 50px; } }
   .team__logos {
     flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 60px;
     max-width: 735px;
     margin-inline: auto;
-    gap: 60px;
-    margin-block-start: 76px;
-    align-items: flex-end; }
+    margin-block-start: 76px; }
     @media (max-width: 768px) {
       .team__logos {
         max-width: 300px; } }
